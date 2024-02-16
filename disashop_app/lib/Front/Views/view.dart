@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'DynamicFormsView.dart';
+import 'dynamic_forms_view.dart';
 
 class ActualView extends StatefulWidget {
   const ActualView({super.key});
