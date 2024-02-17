@@ -1,7 +1,7 @@
 import 'package:disashop_app/Front/Controllers/form_controller.dart';
 import 'package:disashop_app/Front/Views/plantilla_view.dart';
-import 'package:disashop_app/Front/Views/utils/app_header.dart';
-import 'package:disashop_app/Front/Views/utils/field_container.dart';
+import 'package:disashop_app/Front/Views/utils/containers/field_container.dart';
+import 'package:disashop_app/Front/Views/utils/headers/app_header.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -58,8 +58,8 @@ class _DetailsView extends State<DetailsView> {
         ),
         itemCount: actualInputList.length,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(7.0),
+          return const Padding(
+            padding: EdgeInsets.all(7.0),
             child: FieldContainer(),
           );
         },
@@ -77,8 +77,8 @@ class _DetailsView extends State<DetailsView> {
         ),
         itemCount: actualInputList.length,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(7.0),
+          return const Padding(
+            padding: EdgeInsets.all(7.0),
             child: FieldContainer(),
           );
         },

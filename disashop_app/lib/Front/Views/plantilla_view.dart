@@ -1,6 +1,6 @@
 import 'package:disashop_app/Front/Controllers/form_controller.dart';
-import 'package:disashop_app/Front/Views/utils/app_header.dart';
-import 'package:disashop_app/Front/Views/utils/custom_container.dart';
+import 'package:disashop_app/Front/Views/utils/containers/custom_container.dart';
+import 'package:disashop_app/Front/Views/utils/headers/app_header.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

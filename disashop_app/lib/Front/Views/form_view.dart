@@ -1,7 +1,7 @@
 import 'package:disashop_app/Front/Controllers/form_controller.dart';
 import 'package:disashop_app/Front/Views/plantilla_view.dart';
-import 'package:disashop_app/Front/Views/utils/custom_container.dart';
-import 'package:disashop_app/Front/Views/utils/header_container.dart';
+import 'package:disashop_app/Front/Views/utils/containers/custom_container.dart';
+import 'package:disashop_app/Front/Views/utils/headers/header_container.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

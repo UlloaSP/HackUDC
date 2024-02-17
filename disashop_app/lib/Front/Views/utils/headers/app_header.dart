@@ -10,6 +10,9 @@ class TitleContainer extends StatefulWidget {
 }
 
 class _TitleContainer extends State<TitleContainer> {
+  final EdgeInsets _padding =
+      const EdgeInsets.symmetric(horizontal: 8.0, vertical: 18.0);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,8 +22,7 @@ class _TitleContainer extends State<TitleContainer> {
         children: [
           Expanded(
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 8.0, vertical: 18.0),
+              padding: _padding,
               child: Text(
                 widget.headerText,
                 textAlign: TextAlign.center,

@@ -11,6 +11,9 @@ class HeaderContainer extends StatefulWidget {
 }
 
 class _HeaderContainer extends State<HeaderContainer> {
+  final EdgeInsets _padding =
+      const EdgeInsets.symmetric(horizontal: 8.0, vertical: 18.0);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,8 +23,7 @@ class _HeaderContainer extends State<HeaderContainer> {
         children: [
           Expanded(
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 8.0, vertical: 18.0),
+              padding: _padding,
               child: Container(
                 key: const ValueKey('Search Bar'),
                 alignment: Alignment.bottomCenter,
