@@ -1,8 +1,6 @@
 import 'package:disashop_app/Front/Views/details_view.dart';
 import 'package:flutter/material.dart';
 
-import '../form_view.dart';
-
 class CustomContainer extends StatelessWidget {
   final String name;
 
@@ -19,7 +17,7 @@ class CustomContainer extends StatelessWidget {
           context,
           MaterialPageRoute(
               builder: (context) =>
-                  DetailsView(orientation: Orientation.portrait)),
+                  const DetailsView(orientation: Orientation.portrait)),
         );
       },
       style: ElevatedButton.styleFrom(

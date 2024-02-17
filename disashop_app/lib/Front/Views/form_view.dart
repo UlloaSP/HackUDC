@@ -1,7 +1,7 @@
 import 'package:disashop_app/Front/Controllers/form_controller.dart';
 import 'package:disashop_app/Front/Views/plantilla_view.dart';
-import 'package:disashop_app/Front/Views/utils/app_header.dart';
 import 'package:disashop_app/Front/Views/utils/custom_container.dart';
+import 'package:disashop_app/Front/Views/utils/header_container.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,12 +15,14 @@ class FormView extends StatefulWidget {
 }
 
 class _FormView extends State<FormView> {
+  final TextEditingController _searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(
           children: [
-            const TitleContainer(headerText: "FORMS CREADOS"),
+            HeaderContainer(searchController: _searchController),
             (widget.orientation == Orientation.portrait)
                 ? _buildVerticalView()
                 : _buildHorizontalView(),
