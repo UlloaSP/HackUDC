@@ -14,7 +14,8 @@ class ActualView extends StatefulWidget {
 class _ActualViewState extends State<ActualView> {
   @override
   Widget build(BuildContext context) {
-    Provider.of<FormController>(context,listen:false).getForms();
+    Provider.of<FormController>(context, listen: false).getFormTypes();
+    Provider.of<FormController>(context, listen: false).getForms();
     return Scaffold(
       body: OrientationBuilder(
         builder: (context, orientation) {

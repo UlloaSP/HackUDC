@@ -30,7 +30,12 @@ class _FormView extends State<FormView> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-             Provider.of<FormController>(context, listen: false).getFormTypes();
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) =>
+                      PlantillaView(orientation: widget.orientation)),
+            );
           },
           backgroundColor: Colors.blue, // Color de fondo del botón
           elevation: 10.0,
@@ -58,7 +63,8 @@ class _FormView extends State<FormView> {
           return Padding(
             padding: const EdgeInsets.all(7.0),
             child: CustomContainer(
-              name: createdForms[index].title_field,id: createdForms[index].form_type_id,
+              name: createdForms[index].title_field,
+              id: createdForms[index].form_type_id,
             ),
           );
         },
@@ -79,7 +85,8 @@ class _FormView extends State<FormView> {
           return Padding(
             padding: const EdgeInsets.all(7.0),
             child: CustomContainer(
-              name: createdForms[index].title_field,id: createdForms[index].form_type_id,
+              name: createdForms[index].title_field,
+              id: createdForms[index].form_type_id,
             ),
           );
         },
