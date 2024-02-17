@@ -48,4 +48,4 @@ Este proyecto es una aplicación móvil que permite a los usuarios crear y envia
   
 ## Licencia
 
-Este proyecto está licenciado bajo Licencia GPL 3.0.
+Este proyecto está licenciado bajo **GNU GENERAL PUBLIC LICENSE Version 3**
