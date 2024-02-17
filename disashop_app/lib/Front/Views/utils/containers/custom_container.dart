@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 
 class CustomContainer extends StatelessWidget {
   final String name;
+  final int id;
 
   const CustomContainer({
     super.key,
     required this.name,
+    required this.id,
   });
 
   @override

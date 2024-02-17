@@ -1,14 +1,11 @@
+import 'package:disashop_app/Back/createdforms.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../Back/back.dart';
 import '../../Back/forms.dart';
 
 class FormController extends ChangeNotifier {
-  List<Forms> createdForms = [
-    Forms(1, "Formulario de registro", null),
-    Forms(2, "Formulario de contacto", null),
-    Forms(3, "Formulario de comentarios", null)
-  ];
+  List<CreatedForms> createdForms = [];
 
   List<Forms> plantillas = [];
 
@@ -22,10 +19,12 @@ class FormController extends ChangeNotifier {
   void getSpecificFormType(int id) async {
     actualInputList.addAll(
         (await BackController().getDetailFormsType(id)) as Iterable<Map>);
+    notifyListeners();
   }
 
   void getForms() async {
-    // TODO
+    createdForms.addAll(await BackController().getFormsList());
+    notifyListeners();
   }
 
   void addNewForm() async {

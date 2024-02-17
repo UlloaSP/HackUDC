@@ -62,7 +62,7 @@ class _PlantillaView extends State<PlantillaView> {
           return Padding(
             padding: const EdgeInsets.all(7.0),
             child: CustomContainer(
-              name: plantillas[index].form_type_name,
+              name: plantillas[index].form_type_name,id: plantillas[index].form_type_id,
             ),
           );
         },
@@ -83,7 +83,7 @@ class _PlantillaView extends State<PlantillaView> {
           return Padding(
             padding: const EdgeInsets.all(7.0),
             child: CustomContainer(
-              name: plantillas[index].form_type_name,
+              name: plantillas[index].form_type_name,id:plantillas[index].form_type_id,
             ),
           );
         },
