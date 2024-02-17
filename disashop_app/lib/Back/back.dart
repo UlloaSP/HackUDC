@@ -4,18 +4,12 @@ import 'package:disashop_app/Back/detail_form.dart';
 import 'package:disashop_app/Back/forms.dart';
 import 'package:http/http.dart' as http;
 
-const URI =
-    'https://a765843d-1df1-4cef-a052-006dc16f2965.mock.pstmn.io/api/v1/formTypes';
-
-void main() async {
-  int id = 1;
-  DetailsForms h = await BackController().getDetailFormsType(id);
-  print(h.titleField.fieldDescription);
-}
+const uri =
+    'https://3a6e0ad2-8516-4096-b443-862e7bda0f20.mock.pstmn.io/api/v1/formTypes';
 
 class BackController {
   Future<List<Forms>> getFormsTypeList() async {
-    var url = Uri.parse(URI);
+    var url = Uri.parse(uri);
 
     try {
       var response = await http.get(url);
@@ -37,7 +31,7 @@ class BackController {
   }
 
   Future<DetailsForms> getDetailFormsType(int id) async {
-    var url = Uri.parse('$URI/$id');
+    var url = Uri.parse('$uri/$id');
 
     try {
       var response = await http.get(url);
