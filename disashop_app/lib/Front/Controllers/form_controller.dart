@@ -19,8 +19,9 @@ class FormController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void getSpecificFormType() async {
-    // TODO
+  void getSpecificFormType(int id) async {
+    actualInputList.addAll(
+        (await BackController().getDetailFormsType(id)) as Iterable<Map>);
   }
 
   void getForms() async {
