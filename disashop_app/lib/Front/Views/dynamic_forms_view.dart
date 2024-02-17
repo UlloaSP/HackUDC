@@ -18,9 +18,7 @@ class _DynamicFormsViewState extends State<DynamicFormsView> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        HeaderContainer(
-            key: const ValueKey('HeaderContainer'),
-            searchController: _searchController),
+        HeaderContainer(searchController: _searchController),
         (widget.orientation == Orientation.portrait)
             ? _buildVerticalView()
             : _buildHorizontalView(),
@@ -31,7 +29,6 @@ class _DynamicFormsViewState extends State<DynamicFormsView> {
   Widget _buildVerticalView() {
     return Expanded(
       child: GridView.builder(
-        key: const ValueKey("GridView"),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 1,
           childAspectRatio: 3.5,

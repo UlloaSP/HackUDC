@@ -1,12 +1,12 @@
+import 'package:disashop_app/Front/Controllers/form_controller.dart';
+import 'package:disashop_app/Front/Views/view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'Front/Views/view.dart';
 
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (BuildContext context) {},
+      create: (BuildContext context) => FormController(),
       child: const DynamicForms(),
     ),
   );

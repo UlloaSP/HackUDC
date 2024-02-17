@@ -1,6 +1,8 @@
+import 'package:disashop_app/Front/Controllers/form_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import 'dynamic_forms_view.dart';
+import 'form_view.dart';
 
 class ActualView extends StatefulWidget {
   const ActualView({super.key});
@@ -12,14 +14,13 @@ class ActualView extends StatefulWidget {
 class _ActualViewState extends State<ActualView> {
   @override
   Widget build(BuildContext context) {
+    Provider.of<FormController>(context, listen: false).getForms();
     return Scaffold(
       body: OrientationBuilder(
         builder: (context, orientation) {
-          return Scaffold(
-            body: OrientationBuilder(builder: (context, orientation) {
-              return DynamicFormsView(orientation: orientation);
-            }),
-          );
+          return Consumer<FormController>(builder: (context, data, child) {
+            return FormView(orientation: orientation);
+          });
         },
       ),
     );
