@@ -1,7 +1,6 @@
 import 'package:disashop_app/Front/Views/details_view.dart';
 import 'package:flutter/material.dart';
 
-
 class CustomContainer extends StatelessWidget {
   final String name;
   final int id;
@@ -39,7 +38,7 @@ class CustomContainer extends StatelessWidget {
               name,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 30,
+                fontSize: 26,
                 fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(0, 191, 255, 1),
               ),
