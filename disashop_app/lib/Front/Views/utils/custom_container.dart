@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../form_view.dart';
+
 class CustomContainer extends StatelessWidget {
   final String name;
 
@@ -12,8 +14,12 @@ class CustomContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        // Acción que se realiza cuando se presiona el botón
-        print('Botón presionado');
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) =>
+                  FormView(orientation: Orientation.portrait)),
+        );
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color.fromRGBO(31, 31, 62, 1),

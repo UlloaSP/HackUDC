@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+import '../../Back/back.dart';
 import '../../Back/forms.dart';
 
 class FormController extends ChangeNotifier {
@@ -9,16 +10,13 @@ class FormController extends ChangeNotifier {
     Forms(3, "Formulario de comentarios", null)
   ];
 
-  List<Forms> plantillas = [
-    Forms(1, "Mierda 3", null),
-    Forms(2, "Mierda 2", null),
-    Forms(3, "Mierda 1", null)
-  ];
+  List<Forms> plantillas = [];
 
   List<Map> actualInputList = [];
 
   void getFormTypes() async {
-    // TODO
+    plantillas.addAll(await BackController().getFormsTypeList());
+    notifyListeners();
   }
 
   void getSpecificFormType() async {

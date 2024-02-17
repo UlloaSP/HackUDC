@@ -1,10 +1,9 @@
 import 'package:disashop_app/Front/Controllers/form_controller.dart';
+import 'package:disashop_app/Front/Views/plantilla_view.dart';
 import 'package:disashop_app/Front/Views/utils/app_header.dart';
 import 'package:disashop_app/Front/Views/utils/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'form_view.dart';
 
 class DetailsView extends StatefulWidget {
   final Orientation orientation;
@@ -33,7 +32,7 @@ class _DetailsView extends State<DetailsView> {
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      FormView(orientation: widget.orientation)),
+                      PlantillaView(orientation: widget.orientation)),
             );
           },
           backgroundColor: Colors.blue, // Color de fondo del botón

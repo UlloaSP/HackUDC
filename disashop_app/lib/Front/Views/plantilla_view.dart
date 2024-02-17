@@ -4,7 +4,7 @@ import 'package:disashop_app/Front/Views/utils/custom_container.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'details_view.dart';
+import 'form_view.dart';
 
 class PlantillaView extends StatefulWidget {
   final Orientation orientation;
@@ -21,7 +21,7 @@ class _PlantillaView extends State<PlantillaView> {
     return Scaffold(
         body: Column(
           children: [
-            const TitleContainer(headerText: "FORM SHIT"),
+            const TitleContainer(headerText: "PLANTILLAS"),
             (widget.orientation == Orientation.portrait)
                 ? _buildVerticalView()
                 : _buildHorizontalView(),
@@ -33,7 +33,7 @@ class _PlantillaView extends State<PlantillaView> {
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      DetailsView(orientation: widget.orientation)),
+                      FormView(orientation: widget.orientation)),
             );
           },
           backgroundColor: Colors.blue, // Color de fondo del botón
