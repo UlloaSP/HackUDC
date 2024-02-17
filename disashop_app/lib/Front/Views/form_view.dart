@@ -61,7 +61,7 @@ class _FormView extends State<FormView> {
           return Padding(
             padding: const EdgeInsets.all(7.0),
             child: CustomContainer(
-              name: createdForms[index].form_typeName,
+              name: createdForms[index].form_type_name,
             ),
           );
         },
@@ -82,7 +82,7 @@ class _FormView extends State<FormView> {
           return Padding(
             padding: const EdgeInsets.all(7.0),
             child: CustomContainer(
-              name: createdForms[index].form_typeName,
+              name: createdForms[index].form_type_name,
             ),
           );
         },
