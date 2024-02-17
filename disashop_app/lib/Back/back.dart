@@ -11,7 +11,7 @@ const uri =
 void main() async{
   int id = 1;
   DetailsForms h = await BackController().getDetailFormsType(id);
-  print( h.titleField.fieldDescription);
+  print( h.title_field.field_description);
 }
 
 class BackController {
@@ -44,7 +44,8 @@ class BackController {
       var response = await http.get(url);
 
       if (response.statusCode == 200) {
-        dynamic jsonData = json.decode(response.body);
+        Map<String,dynamic> jsonData = json.decode(response.body);
+        print(jsonData['title_description']);
         return DetailsForms.fromJson(jsonData);
       } else {
         throw 'Request failed with status: ${response.statusCode}';
