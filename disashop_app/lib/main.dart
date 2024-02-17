@@ -1,7 +1,8 @@
 import 'package:disashop_app/Front/Controllers/form_controller.dart';
-import 'package:disashop_app/Front/Views/view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'Front/Views/details_view.dart';
 
 void main() {
   runApp(
@@ -27,7 +28,7 @@ class DynamicForms extends StatelessWidget {
           backgroundColor: Color.fromRGBO(22, 22, 53, 1),
         ),
       ),
-      home: const ActualView(),
+      home: const DetailsView(orientation: Orientation.portrait),
     );
   }
 }

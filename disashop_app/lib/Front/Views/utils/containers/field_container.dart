@@ -32,7 +32,7 @@ class _FieldContainerState extends State<FieldContainer> {
     _controller.text = '';
     return Container(
       width: double.infinity,
-      height: 100,
+      height: 30000,
       decoration: BoxDecoration(
         color: const Color.fromRGBO(31, 31, 62, 1),
         borderRadius: BorderRadius.circular(16),
@@ -44,7 +44,6 @@ class _FieldContainerState extends State<FieldContainer> {
             child: SizedBox(
               width: 200,
               child: TextField(
-                key: ValueKey('Value ${widget.key}'),
                 inputFormatters: [
                   FilteringTextInputFormatter.allow(RegExp(r'[0-9.]')),
                   LengthLimitingTextInputFormatter(10),
@@ -54,7 +53,6 @@ class _FieldContainerState extends State<FieldContainer> {
                       .createdForms;
                 },
                 controller: _controller,
-                keyboardType: TextInputType.number,
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 24, color: Colors.white),
                 decoration: const InputDecoration(

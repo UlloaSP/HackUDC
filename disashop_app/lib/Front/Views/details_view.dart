@@ -1,9 +1,8 @@
-import 'package:disashop_app/Front/Controllers/form_controller.dart';
 import 'package:disashop_app/Front/Views/plantilla_view.dart';
 import 'package:disashop_app/Front/Views/utils/containers/field_container.dart';
+import 'package:disashop_app/Front/Views/utils/footers/footer_container.dart';
 import 'package:disashop_app/Front/Views/utils/headers/app_header.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class DetailsView extends StatefulWidget {
   final Orientation orientation;
@@ -21,9 +20,8 @@ class _DetailsView extends State<DetailsView> {
         body: Column(
           children: [
             const TitleContainer(headerText: "DETALLES"),
-            (widget.orientation == Orientation.portrait)
-                ? _buildVerticalView()
-                : _buildHorizontalView(),
+            _buildVerticalView(),
+            const FooterContainer(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
@@ -48,40 +46,10 @@ class _DetailsView extends State<DetailsView> {
   }
 
   Widget _buildVerticalView() {
-    var actualInputList = context.watch<FormController>().actualInputList;
     return Expanded(
-      child: GridView.builder(
-        key: const ValueKey("GridView"),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 1,
-          childAspectRatio: 3.5,
-        ),
-        itemCount: actualInputList.length,
-        itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.all(7.0),
-            child: FieldContainer(),
-          );
-        },
-      ),
-    );
-  }
-
-  Widget _buildHorizontalView() {
-    var actualInputList = context.watch<FormController>().actualInputList;
-    return Expanded(
-      child: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 3.75,
-        ),
-        itemCount: actualInputList.length,
-        itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.all(7.0),
-            child: FieldContainer(),
-          );
-        },
+      child: Card(
+        color: Colors.grey[900], // Color de fondo más claro
+        child: const FieldContainer(),
       ),
     );
   }
