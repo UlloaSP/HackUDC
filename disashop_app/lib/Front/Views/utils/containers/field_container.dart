@@ -1,7 +1,5 @@
-import 'package:disashop_app/Front/Controllers/form_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 
 class FieldContainer extends StatefulWidget {
   const FieldContainer({
@@ -34,7 +32,7 @@ class _FieldContainerState extends State<FieldContainer> {
       width: double.infinity,
       height: 30000,
       decoration: BoxDecoration(
-        color: const Color.fromRGBO(31, 31, 62, 1),
+        color: const Color.fromRGBO(31, 31, 62, 0.7),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Stack(
@@ -45,13 +43,9 @@ class _FieldContainerState extends State<FieldContainer> {
               width: 200,
               child: TextField(
                 inputFormatters: [
-                  FilteringTextInputFormatter.allow(RegExp(r'[0-9.]')),
-                  LengthLimitingTextInputFormatter(10),
+                  FilteringTextInputFormatter.allow(RegExp(r'[a-z.]')),
+                  LengthLimitingTextInputFormatter(100),
                 ],
-                onSubmitted: (input) {
-                  Provider.of<FormController>(context, listen: false)
-                      .createdForms;
-                },
                 controller: _controller,
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 24, color: Colors.white),
