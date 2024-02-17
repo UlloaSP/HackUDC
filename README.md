@@ -44,6 +44,7 @@ Este proyecto es una aplicación móvil que permite a los usuarios crear y envia
 
 ### Este proyecto fue desarrollado por:
   **Ulloa Santín, Pablo**
+  
   **Rey García, Santiago**
   
 ## Licencia
